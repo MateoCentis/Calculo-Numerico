@@ -1,0 +1,75 @@
+% En el directorio de trabajo deben estar los archivos: momento (tipo LaTeX Class), articulo (tipo LaTeX Class), éstos archivos no se deben modificar,  Bibfile (tipo BibTex Database) en donde el autor debe introducir los datos de las referencias en formato BibTex y  Formato.tex (éste archivo en donde se edita el contenido del documento
+
+ 
+%-----------------------------------------------------
+%PAQUETES
+\documentclass[10pt]{momento}
+\usepackage[pdftex]{graphicx}
+\usepackage{verbatim}
+\usepackage[centerlast,sc,footnotesize]{caption}
+\usepackage{subfigure}
+\usepackage{amsmath}
+\usepackage[spanish, es-tabla]{babel} %Idioma español
+\usepackage[utf8]{inputenc} %Acentos español
+%--------------------------------------------------
+%%%%%%%%%%% TITULO DEL ARTICULO (Los títulos, resúmenes y palabras clave se organizan dependiendo del idioma en el que se escriba el artículo. Entonces, si el artículo se escribe en español se debe colocar primero el título en español y luego en inglés. Si el artículo se escribe en inglés se coloca primero el título en inglés y luego en español. Así mismo para el resumen y palabras clave)
+\title{CÁLCULO NUMÉRICO\\[0.5cm]
+ENTREGABLE NUMÉRO 1}
+ 
+%%%%%%%%%%% AUTORES DEL ARTICULO
+\author{Centis Mateo}
+% Por cada autor \suprm# es para referenciar la afiliacion del autor con el número #. Se debe incluir de cada autor el primer nombre, inicial del segundo nombre si lo tiene y el primer apellido. 
+
+%%%%%%%%%%% INSTITUCION DE LOS AUTORES
+\newcommand{\afiliacion}{UNL - Facultad de Ingeniería y Ciencias Hídricas}
+% Escribir afiliación (Grupo de investigación, Dependencia, Universidad, País) de los autores dentro del corchete derecho. 
+% Recuerde que el caracter \\ es para comenzar una nueva linea
+
+%%%%%%%%%%% ENCABEZADOS
+\newcommand{\autor}{Centis Mateo}
+\newcommand{\tema}{CN - entregable 1}
+% Autor 1 y Autor 2         -----> aparecen en el encabezado de las paginas pares
+% Titulo corto del articulo -----> aparece en el encabezado de las paginas impares
+
+%%%%%%%%%%% CORREOS ELECTRONICOS DE LOS AUTORES
+%\authorinfo{mateo.centis@hotmail.com.ar}
+%A1 y A2 son las iniciales del nombre de los autores correspondientes
+
+%%%%%%%%%%% PAGINA EN QUE COMIENZA EL ARTICULO (RESERVADO PARA EL EDITOR)
+\setcounter{page}{1}
+
+\begin{document}
+\maketitle
+
+%%%%%%%%%%% CUERPO DEL DOCUMENTO
+% El texto debe dividirse en secciones, cada una con un encabezado (por ejemplo: Introducción; Parte Experimental, Materiales y Métodos o Desarrollo teórico; Resultados; Discusión; Conclusiones). Se recomienda que estas secciones sean breves y equilibradas.
+\section*{Enunciado}
+Dado el siguiente sistema de ecuaciones lineales:
+\begin{equation*}
+  \left\{
+  \begin{array}{ll}
+    x_1=0,                                                \\
+    -x_{i-1}+2x_i-x_{i+1}=\frac{1}{N^2}, & i=2,3,...,N-1, \\
+    x_N=0,
+  \end{array}
+  \right.
+\end{equation*}
+\begin{enumerate}
+  \renewcommand{\theenumi}{\alph{enumi}} %Letras minúsculas
+  \item Realice un script que resuelva el sistema para N = 100, utilizando los métodos de Jacobi,
+        Gauss-Seidel, SOR, gradiente conjugado y eliminación de Gauss.
+  \item Determine el número de iteraciones necesarias para cada método iterativo, considerando una
+        cota para el residuo de $1e-6$. Determine, para el método de SOR, un parámetro de relajación
+        $\omega$ óptimo. ¿Todos los métodos convergen? Justifique y grafique el historial del residuo para
+        cada método.
+  \item Suponiendo que la solución obtenida corresponde a una función $y=x(t)$ evaluada en N puntos
+        uniformemente distribuidos en el intervalo [0, 1], graficar la solución $y = x(t)$ obtenida con cada
+        método, y saque conclusiones.
+\end{enumerate}
+
+\section*{Resolución}
+
+\end{document}
+
+
+

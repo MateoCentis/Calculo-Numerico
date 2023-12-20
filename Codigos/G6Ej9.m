@@ -1,0 +1,28 @@
+f=@(x)(x.^(2)).*(e.^(-x));
+a=0;
+b=1;
+n=2;
+L=1;
+format long
+display("Caso n=2");
+printf('%s',"Cuadratura Gauss= ");
+printf('%f',cuad_gauss_c(f,a,b,L,n));
+disp(" ");
+printf('%s',"Newton-Cotes= ");
+printf('%f',intNCcompuesta(f,a,b,L,n)); 
+disp(" ");
+printf('%s',"resultado exacto= ");
+printf('%f',2-5/e);
+disp(" ");
+disp(" ");
+n=3;
+display("Caso n=3");
+printf('%s',"Cuadratura Gauss= ");
+printf('%f',cuad_gauss_c(f,a,b,L,n));
+disp(" ");
+printf('%s',"Newton-Cotes= ");
+printf('%f',intNCcompuesta(f,a,b,L,n)); 
+disp(" ");
+printf('%s',"resultado exacto= ");
+printf('%f',2-5/e);
+disp(" ");
